@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <title>DDrugs 2.0</title>
+</head>
+<body>
+  <h1>DDrugs 2.0</h1>
+  <div id="stats">
+    <p>Zł: <span id="cash">1000</span></p>
+    <p>BTC: <span id="btc">0.000</span></p>
+    <p>Magazyn: <span id="storageUsed">0</span>/<span id="storageLimit">50</span>g</p>
+  </div>
+
+  <h2>Kupuj narkotyki</h2>
+  <div id="market">
+    <!-- Przycisk do zakupu -->
+    <button onclick="buy('kokaina', 400)">Kup kokaina (400 zł/g)</button>
+    <button onclick="buy('marihuana', 50)">Kup marihuana (50 zł/g)</button>
+    <button onclick="buy('mefedron', 50)">Kup mefedron (50 zł/g)</button>
+    <button onclick="buy('amfetamina', 40)">Kup amfetamina (40 zł/g)</button>
+    <button onclick="buy('pixy', 20)">Kup pixy (20 zł/szt)</button>
+  </div>
+
+  <h2>Twoje towary</h2>
+  <div id="inventory"></div>
+
+  <h2>BTC Portfel</h2>
+  <input type="number" id="btcAmount" placeholder="Kwota BTC" />
+  <button onclick="btc.deposit()">Wpłać</button>
+  <button onclick="btc.withdraw()">Wypłać</button>
+
+  <h2>Podróże</h2>
+  <div id="travel"></div>
+
+  <h2>Pracownicy</h2>
+  <div id="workers"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
